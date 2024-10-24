@@ -5,7 +5,6 @@
         </div>
     @endif
     <form wire:submit.prevent="submit" enctype="multipart/form-data">
-
         <div id="dropped-image-div"
             class="hidden mb-5 text-center border-2 border-green-600 border-dotted w-fit h-62 rounded-xl bg-whiter">
             <input type="file" name="productImage" id="productImage" class="hidden" wire:model='productImage' />
@@ -25,7 +24,6 @@
                 <span class="text-danger">{{ $message }}</span>
             @enderror
         </div>
-
         <div class="form-group">
             <label for="exampleInputName">Image</label>
             <input type="file" class="form-control" id="exampleInputName" wire:model="image">
