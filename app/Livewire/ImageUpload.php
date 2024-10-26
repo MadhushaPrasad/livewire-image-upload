@@ -23,12 +23,13 @@ class ImageUpload extends Component
     {
         $validatedData = $this->validate([
             'image' => 'required|image|mimes:jpeg,png,svg,jpg,gif|max:1024',
-            'profileImage' => 'image|mimes:jpeg,png,svg,jpg,gif|max:1024',
+            'profileImage' => 'required|image|mimes:jpeg,png,svg,jpg,gif|max:1024',
         ]);
         $imageName = $this->image->store("images", 'public');
-        $profileImage = $this->profileImage->store("images/product", 'public');
+        $profileImage = $this->profileImage->store("images/user", 'public');
         $validatedData['title'] = $imageName;
         $validatedData['product_image'] = $profileImage;
+        // dd($validatedData);
         Image::create($validatedData);
 
         session()->flash('message', 'Image has been successfully Uploaded.');

@@ -65,7 +65,7 @@
 
 
         .customer-preview-image-bg {
-            background-color: #CEE5E6;
+            background-color: #eeeeee;
             /* Light Green */
             border-radius: 6px;
             /* 0.375rem */
@@ -75,6 +75,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 15px
         }
 
         .customer-preview-image {
