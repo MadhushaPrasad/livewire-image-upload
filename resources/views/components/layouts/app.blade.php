@@ -62,6 +62,27 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
+
+        .customer-preview-image-bg {
+            background-color: #CEE5E6;
+            /* Light Green */
+            border-radius: 6px;
+            /* 0.375rem */
+            width: 100%;
+            height: 240px;
+            /* 15rem */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .customer-preview-image {
+            border-radius: 6px;
+            /* 0.375rem */
+            height: 198px;
+            width: 198px;
+        }
     </style>
 </head>
 

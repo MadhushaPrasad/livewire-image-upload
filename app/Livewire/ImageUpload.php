@@ -10,7 +10,9 @@ class ImageUpload extends Component
 {
     use WithFileUploads;
     public $image;
-    public $productImage;
+    public $profileImage;
+
+    public $loadImage;
 
     public function render()
     {
@@ -21,12 +23,12 @@ class ImageUpload extends Component
     {
         $validatedData = $this->validate([
             'image' => 'required|image|mimes:jpeg,png,svg,jpg,gif|max:1024',
-            'productImage' => 'image|mimes:jpeg,png,svg,jpg,gif|max:1024',
+            'profileImage' => 'image|mimes:jpeg,png,svg,jpg,gif|max:1024',
         ]);
         $imageName = $this->image->store("images", 'public');
-        $productImage = $this->productImage->store("images/product", 'public');
+        $profileImage = $this->profileImage->store("images/product", 'public');
         $validatedData['title'] = $imageName;
-        $validatedData['product_image'] = $productImage;
+        $validatedData['product_image'] = $profileImage;
         Image::create($validatedData);
 
         session()->flash('message', 'Image has been successfully Uploaded.');
